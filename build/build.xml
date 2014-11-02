@@ -1,25 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="testapp" basedir="." default="build">
-
-    <!-- Expose the Jenkins Environment variables using env -->
     <property environment="env" />
-
     <!-- Include additional build properties config file -->
     <property file="build.properties" />
-
     <!-- Define the build target and list any dependecies -->
     <target name="build" depends="dist" />
-
     <!-- Define the cleanup target -->
     <target name="clean" description="Cleanup old build artifacts">
         <delete dir="${base.results.dir}" />
     </target>
-
     <!-- Define the setup target -->
     <target name="setup" depends="clean" description="Setup new build">
         <mkdir dir="${base.results.dir}" />
     </target>
-
     <!-- Define the distribution target -->
     <target name="dist" description="Generates a tar file for distribution">
         <mkdir dir="${dist.dir}" />
