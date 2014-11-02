@@ -2,7 +2,7 @@
 <project name="testapp" basedir="." default="build">
 
     <!-- Expose the Jenkins Environment variables using env -->
-    <property environment="env"/>
+    <property environment="env" />
 
     <!-- Include additional build properties config file -->
     <property file="build.properties" />
