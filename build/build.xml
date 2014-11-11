@@ -18,9 +18,10 @@
 <mkdir dir="${dist.dir}" />
 <!-- application directory gzip files -->
 <tar destfile="${dist.dir}/${env.JOB_NAME}-${env.BUILD_NUMBER}.tar.gz" compression="gzip">
-<tarfileset dir="${base.dir}/../..">
+<tarfileset dir="${base.dir}/../workspace">
 <include name="*/**" />
 <exclude name="**/.git/**" />
+<exclude name="**/.gitignore">
 <exclude name="**/.settings/**" />
 <exclude name="${dist.build.dir}" />
 <exclude name="${dist.tests.dir}" />
