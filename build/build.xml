@@ -21,7 +21,7 @@
 <tarfileset dir="${base.dir}/../workspace">
 <include name="*/**" />
 <exclude name="**/.git/**" />
-<exclude name="**/.gitignore">
+<exclude name="**/.gitignore" />
 <exclude name="**/.settings/**" />
 <exclude name="${dist.build.dir}" />
 <exclude name="${dist.tests.dir}" />
